@@ -1,6 +1,7 @@
-package com.example.learnstupidandroid.collections
+package com.example.learnstupidandroid.docs.collections
 
-import com.example.learnstupidandroid.collections.collection.*
+import com.example.learnstupidandroid.common.Doc
+import com.example.learnstupidandroid.docs.collections.collection.*
 
 /*
 > Какие есть типы коллекций?
@@ -12,10 +13,10 @@ import com.example.learnstupidandroid.collections.collection.*
 > Во что превращаются 'setOf()', 'listOf()' в Kotlin
  */
 
-object Collections {
+object Collections: Doc() {
 
-    fun init() {
-        shortenedDocs()
+    override fun init() {
+        docs()
 
         listDocs()
         arrayList()
@@ -32,7 +33,7 @@ object Collections {
         kotlinCollections()
     }
 
-    private fun shortenedDocs() {
+    override fun docs() {
         /*
           JAVA
 

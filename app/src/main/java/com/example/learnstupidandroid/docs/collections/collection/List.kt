@@ -1,4 +1,4 @@
-package com.example.learnstupidandroid.collections.collection
+package com.example.learnstupidandroid.docs.collections.collection
 
 import java.util.ArrayList
 
