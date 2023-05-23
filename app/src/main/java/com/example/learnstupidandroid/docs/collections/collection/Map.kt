@@ -3,7 +3,7 @@ package com.example.learnstupidandroid.docs.collections.collection
 import java.util.HashMap
 
 fun mapDocs() {
-/*
+/**
     Map
     1. WeakHashMap (implements Map)
         uses week references for the keys
@@ -38,7 +38,7 @@ fun hashMap() {
 
     val hashmap: HashMap<String?, String?> = HashMap()
 
-    /*
+    /**
     IMPORTANT:
     loadFactor - by default 75%. the measure that decides when to increase the capacity of the Map
     initialCapacity - by default 16 (2^4). is doubled each time it reaches the threshold

@@ -3,7 +3,7 @@ package com.example.learnstupidandroid.docs.collections.collection
 import java.util.ArrayList
 
 fun listDocs() {
-/*
+/**
     List (interface, extends Collection)
 
         1. ArrayList (implements List)

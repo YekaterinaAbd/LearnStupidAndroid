@@ -3,14 +3,14 @@ package com.example.learnstupidandroid.docs.collections
 import com.example.learnstupidandroid.common.Doc
 import com.example.learnstupidandroid.docs.collections.collection.*
 
-/*
-> Какие есть типы коллекций?
-> Отличие и применение List, Map и Set
-> Отличие LinkedList и ArrayList
-> Сложность доступа/добавления/удаления элементов
-> Понимание внутреннего устройства HashMap
-> Знание о многопоточных коллекциях
-> Во что превращаются 'setOf()', 'listOf()' в Kotlin
+/**
+- Какие есть типы коллекций?
+- Отличие и применение List, Map и Set
+- Отличие LinkedList и ArrayList
+- Сложность доступа/добавления/удаления элементов
+- Понимание внутреннего устройства HashMap
+- Знание о многопоточных коллекциях
+- Во что превращаются 'setOf()', 'listOf()' в Kotlin
  */
 
 object Collections: Doc() {
@@ -34,7 +34,7 @@ object Collections: Doc() {
     }
 
     override fun docs() {
-        /*
+        /**
           JAVA
 
         Iterable
@@ -112,7 +112,7 @@ object Collections: Doc() {
     }
 
     private fun concurrentCollections() {
-        /*
+        /**
         Методы обрамления для получения синхронизированной (потокобезопасной) коллекции
         Collections.synchronizedList  (List)
         Collections.synchronizedSet   (Set)
@@ -128,7 +128,7 @@ object Collections: Doc() {
     }
 
     private fun kotlinCollections() {
-        /*
+        /**
         Iterable    ->  MutableIterable (extends Iterable)
         Collection      MutableCollection
         List Set        MutableList MutableSet                  Map MutableMap

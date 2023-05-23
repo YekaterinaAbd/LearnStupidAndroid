@@ -4,7 +4,7 @@ import java.util.*
 import kotlin.collections.ArrayDeque
 
 fun queueDocs() {
-/*
+/**
     Queue (interface, extends Collection)
         first-in-first-out order
 

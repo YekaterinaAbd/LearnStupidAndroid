@@ -1,7 +1,7 @@
 package com.example.learnstupidandroid.docs.collections.collection
 
 fun setDocs() {
-/*
+/**
     Set (interface, extends Collection)
         no duplicate values
 
