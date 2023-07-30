@@ -24,7 +24,7 @@ object OOP: Doc() {
     }
 
     override fun docs() {
-    /*
+    /**
         List of OOP concepts in Java:
 
         1. Abstraction
