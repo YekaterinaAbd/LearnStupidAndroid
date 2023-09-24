@@ -2,10 +2,10 @@ package com.example.learnstupidandroid
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.learnstupidandroid.docs.computer_science.OOP
-import com.example.learnstupidandroid.docs.computer_science.ProgrammingPrinciples
-import com.example.learnstupidandroid.docs.computer_science.collections.Collections
-import com.example.learnstupidandroid.docs.computer_science.delegate.Delegates
+import com.example.learnstupidandroid.docs.computerScience.oop.OOP
+import com.example.learnstupidandroid.docs.computerScience.pp.ProgrammingPrinciples
+import com.example.learnstupidandroid.docs.computerScience.collections.Collections
+import com.example.learnstupidandroid.docs.computerScience.delegate.Delegates
 import com.example.learnstupidandroid.docs.language.AccessModifiers
 
 class MainActivity : AppCompatActivity() {

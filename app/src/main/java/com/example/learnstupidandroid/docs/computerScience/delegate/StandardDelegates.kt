@@ -1,4 +1,4 @@
-package com.example.learnstupidandroid.docs.computer_science.delegate
+package com.example.learnstupidandroid.docs.computerScience.delegate
 
 import kotlin.properties.Delegates
 
@@ -14,7 +14,7 @@ object StandardDelegates {
     /**
      * **by lazy()**
      *
-     * [LazyThreadSafetyMode.SYNCHRONIZED] - default
+     * [LazyThreadSafetyMode.SYNCHRONIZED] - default, locks are used to ensure that only a single thread can initialize the Lazy instance.
      *
      * [LazyThreadSafetyMode.PUBLICATION] - only the first returned value will be used as the value of Lazy instance
      *
@@ -72,12 +72,14 @@ object StandardDelegates {
         observableString = "value1"
         observableString = "value2"
 
+
         // Delegates.vetoable()
         var vetoableString by Delegates.vetoable("a") { property, oldValue, newValue ->
             newValue.length > oldValue.length
         }
         vetoableString = "aaa" //value changed
         vetoableString = "a" // value not changed
+
 
         // Delegated.notNull()
         var notNullString by Delegates.notNull<String>()
@@ -87,14 +89,26 @@ object StandardDelegates {
     /**
      * From Kotlin 1.4 **Delegating to another property**
      * - A top-level property
+     *
+     *      val delegateValue: Int by SomeClass::topLevel
+     *
+     *
      * - A member or an extension property of the same class
+     *
+     *      val delegateValue: String by this::anotherValue
+     *
+     *
      * - A member or an extension property of another class
      *
+     *      val delegateValue: String by AnotherClass::anotherValue
      */
+
     object DelegateToAnotherProperty {
-        val topLevel: Int = 0
+
+        const val topLevel: Int = 0
 
         class ClassWithDelegate(val param: String)
+        
         class RenamedProperty(
             private val param: String,
             private val classWithDelegate: ClassWithDelegate

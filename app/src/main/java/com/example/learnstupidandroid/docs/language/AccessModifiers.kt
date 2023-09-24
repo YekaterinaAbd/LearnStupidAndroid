@@ -30,7 +30,7 @@ object AccessModifiers : Doc() {
      * Java
      * - private: visible only inside the class (NO top level classes)
      * - default (package-private): visible only in the same package
-     * - protected: in the same package or subclasses in different packages
+     * - protected: in the same package or subclasses in different packages (NO top level)
      * - public: everywhere
      *
      * **In Kotlin, there’s no exact substitute for the package-private(default) modifier from Java.**

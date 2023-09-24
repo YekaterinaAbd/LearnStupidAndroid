@@ -1,8 +1,7 @@
-package com.example.learnstupidandroid.docs.computer_science.delegate
+package com.example.learnstupidandroid.docs.computerScience.delegate
 
-import android.util.Log
-import kotlin.properties.ReadWriteProperty
 import kotlin.properties.ReadOnlyProperty
+import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
 object PropertiesDelegates {
@@ -13,18 +12,19 @@ object PropertiesDelegates {
      *
      * functions must be operator fun
      */
-    private var delegate: String by ClassDelegate()
-    private var funDelegate: String by objectDelegate()
-    private val valFunDelegate: String by objectDelegate()
 
     fun init() {
         ClassDelegate()
         objectDelegate()
 
+        //examples
         usingClassDelegate()
         usingObjectDelegate()
     }
 
+    /**
+     * Create delegate using class
+     */
     class ClassDelegate {
 
         /**
@@ -33,7 +33,8 @@ object PropertiesDelegates {
          * @param value value being assigned
          */
         operator fun setValue(propertiesDelegates: Any, property: KProperty<*>, value: String) {
-            Log.d("LOL", "$propertiesDelegates ${property.name} $value")
+            //when the value is set, print it properties
+            println("$propertiesDelegates ${property.name} $value")
         }
 
         /**
@@ -46,7 +47,7 @@ object PropertiesDelegates {
     }
 
     /**
-     * **Create delegate without new classes**
+     * **Create delegate without new classes using object**
      *
      * use interface [ReadOnlyProperty], [ReadWriteProperty] (can use ReadWriteProperty with val)
      */
@@ -59,20 +60,30 @@ object PropertiesDelegates {
             }
         }
 
+
+    /**
+     * Examples
+     */
     private var classDelegate: String by ClassDelegate()
+    private var varFunDelegate: String by objectDelegate()
+    private val valFunDelegate: String by objectDelegate()
+
+    /**
+     * Example class delegate
+     */
     private fun usingClassDelegate() {
-        Log.d("LOL", classDelegate)
+        println(classDelegate)
         classDelegate = "NEW VALUE"
-        Log.d("LOL", classDelegate)
+        println(classDelegate)
     }
 
+    /**
+     * Example object delegate
+     */
     private fun usingObjectDelegate() {
-        var varFunDelegate: String by objectDelegate()
-        val valFunDelegate: String by objectDelegate()
-
-        Log.d("LOL", varFunDelegate)
+        println(varFunDelegate)
         varFunDelegate = "SOMETHING NEW"
-        Log.d("LOL", varFunDelegate)
+        println(varFunDelegate)
 
         // val cannot be reassigned error
         // valFunDelegate = "SOMETHING NEW"

@@ -1,13 +1,13 @@
-package com.example.learnstupidandroid.docs.computer_science.collections
+package com.example.learnstupidandroid.docs.computerScience.collections
 
 import com.example.learnstupidandroid.common.Doc
-import com.example.learnstupidandroid.docs.computer_science.collections.collection.arrayList
-import com.example.learnstupidandroid.docs.computer_science.collections.collection.hashMap
-import com.example.learnstupidandroid.docs.computer_science.collections.collection.listDocs
-import com.example.learnstupidandroid.docs.computer_science.collections.collection.mapDocs
-import com.example.learnstupidandroid.docs.computer_science.collections.collection.queue
-import com.example.learnstupidandroid.docs.computer_science.collections.collection.queueDocs
-import com.example.learnstupidandroid.docs.computer_science.collections.collection.setDocs
+import com.example.learnstupidandroid.docs.computerScience.collections.collection.arrayList
+import com.example.learnstupidandroid.docs.computerScience.collections.collection.hashMap
+import com.example.learnstupidandroid.docs.computerScience.collections.collection.listDocs
+import com.example.learnstupidandroid.docs.computerScience.collections.collection.mapDocs
+import com.example.learnstupidandroid.docs.computerScience.collections.collection.queue
+import com.example.learnstupidandroid.docs.computerScience.collections.collection.queueDocs
+import com.example.learnstupidandroid.docs.computerScience.collections.collection.setDocs
 
 /**
 - Какие есть типы коллекций?
