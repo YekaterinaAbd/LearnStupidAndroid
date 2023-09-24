@@ -1,4 +1,4 @@
-package com.example.learnstupidandroid.docs
+package com.example.learnstupidandroid.docs.computer_science
 
 import com.example.learnstupidandroid.common.Doc
 

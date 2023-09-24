@@ -1,7 +1,14 @@
-package com.example.learnstupidandroid.docs.collections
+package com.example.learnstupidandroid.docs.computer_science.collections
 
 import com.example.learnstupidandroid.common.Doc
 import com.example.learnstupidandroid.docs.collections.collection.*
+import com.example.learnstupidandroid.docs.computer_science.collections.collection.arrayList
+import com.example.learnstupidandroid.docs.computer_science.collections.collection.hashMap
+import com.example.learnstupidandroid.docs.computer_science.collections.collection.listDocs
+import com.example.learnstupidandroid.docs.computer_science.collections.collection.mapDocs
+import com.example.learnstupidandroid.docs.computer_science.collections.collection.queue
+import com.example.learnstupidandroid.docs.computer_science.collections.collection.queueDocs
+import com.example.learnstupidandroid.docs.computer_science.collections.collection.setDocs
 
 /**
 - Какие есть типы коллекций?

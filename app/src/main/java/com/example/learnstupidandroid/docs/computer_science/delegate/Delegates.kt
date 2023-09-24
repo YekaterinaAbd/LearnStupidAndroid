@@ -1,4 +1,4 @@
-package com.example.learnstupidandroid.docs.delegate
+package com.example.learnstupidandroid.docs.computer_science.delegate
 
 import com.example.learnstupidandroid.common.Doc
 

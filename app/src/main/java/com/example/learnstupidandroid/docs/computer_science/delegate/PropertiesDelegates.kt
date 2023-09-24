@@ -1,4 +1,4 @@
-package com.example.learnstupidandroid.docs.delegate
+package com.example.learnstupidandroid.docs.computer_science.delegate
 
 import android.util.Log
 import kotlin.properties.ReadWriteProperty

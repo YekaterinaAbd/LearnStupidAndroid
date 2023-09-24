@@ -1,4 +1,4 @@
-package com.example.learnstupidandroid.docs.delegate
+package com.example.learnstupidandroid.docs.computer_science.delegate
 
 import kotlin.properties.Delegates
 
@@ -112,7 +112,7 @@ object StandardDelegates {
             private val delegateClassParam: String by classWithDelegate::param
 
             //of top-level property
-            private val delegateTopLevel: Int by ::topLevel
+            private val delegateTopLevel: Int by DelegateToAnotherProperty::topLevel
         }
     }
 

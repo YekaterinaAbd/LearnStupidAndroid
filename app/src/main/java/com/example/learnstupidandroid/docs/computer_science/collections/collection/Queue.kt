@@ -1,4 +1,4 @@
-package com.example.learnstupidandroid.docs.collections.collection
+package com.example.learnstupidandroid.docs.computer_science.collections.collection
 
 import java.util.*
 import kotlin.collections.ArrayDeque
