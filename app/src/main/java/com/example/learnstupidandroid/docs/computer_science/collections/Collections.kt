@@ -1,7 +1,6 @@
 package com.example.learnstupidandroid.docs.computer_science.collections
 
 import com.example.learnstupidandroid.common.Doc
-import com.example.learnstupidandroid.docs.collections.collection.*
 import com.example.learnstupidandroid.docs.computer_science.collections.collection.arrayList
 import com.example.learnstupidandroid.docs.computer_science.collections.collection.hashMap
 import com.example.learnstupidandroid.docs.computer_science.collections.collection.listDocs
@@ -20,7 +19,7 @@ import com.example.learnstupidandroid.docs.computer_science.collections.collecti
 - Во что превращаются 'setOf()', 'listOf()' в Kotlin
  */
 
-object Collections: Doc() {
+object Collections : Doc() {
 
     override fun init() {
         docs()
@@ -42,80 +41,80 @@ object Collections: Doc() {
 
     override fun docs() {
         /**
-          JAVA
+        JAVA
 
         Iterable
         Collection
-    List   Queue   Set
+        List   Queue   Set
 
-    List (interface, extends Collection)
+        List (interface, extends Collection)
         1. ArrayList (implements List)
-            NOT SYNCHRONIZED
+        NOT SYNCHRONIZED
         2. Vector (implements List)
-            SYNCHRONIZED
+        SYNCHRONIZED
         3. LinkedList (implements List implements Deque)
         4. Stack (extends Vector)
-            last-in-first-out (LIFO) stack of objects
-            PREFER TO USE: Dequeue
+        last-in-first-out (LIFO) stack of objects
+        PREFER TO USE: Dequeue
 
 
-    Queue (interface, extends Collection)
+        Queue (interface, extends Collection)
         first-in-first-out order
         1. PriorityQueue (implements Queue)
-            NOT THREAD SAFE
-            priority with Comparator
+        NOT THREAD SAFE
+        priority with Comparator
         2. PriorityBlockingQueue
-            THREAD SAFE
+        THREAD SAFE
         3. Dequeue (interface, extends Queue)
         double-ended queue
         used as a queue (first-in-first-out/FIFO) or as a stack (last-in-first-out/LIFO)
-            1. ArrayDeque (implements Deque)
-            NOT THREAD SAFE
+        1. ArrayDeque (implements Deque)
+        NOT THREAD SAFE
 
 
-    Set (interface, extends Collection)
+        Set (interface, extends Collection)
         no duplicate values
         1. HashSet (implements Set)
-            uses a hash table for storage - HashMap
-            order is not guaranteed
+        uses a hash table for storage - HashMap
+        order is not guaranteed
         2. LinkedHashSet (implements Set, extends HashSet)
-            uses LinkedHashMap
-            order as added
+        uses LinkedHashMap
+        order as added
         3. SortedSet (interface, extends Set)
-            arranged in the increasing (ascending) order
-            1. TreeSet (implements SortedSet)
-                Comparator for order
-                uses a tree for storage
-                access and retrieval time is quite fast
+        arranged in the increasing (ascending) order
+        1. TreeSet (implements SortedSet)
+        Comparator for order
+        uses a tree for storage
+        access and retrieval time is quite fast
 
 
-    Map
-    1. WeakHashMap (implements Map)
+        Map
+        1. WeakHashMap (implements Map)
         uses week references for the keys
 
-    2. HashMap (implements Map)
+        2. HashMap (implements Map)
         NOT SYNCHRONIZED
         key and value can be null
         не упорядоченная, зависит от хеш функции
-            1. LinkedHashMap (extends HashMap)
-                упорядоченная - по порядку добавления элементов
-                двунаправленные связи
-                недостаток — увеличение памяти, которое занимет коллекция
+        1. LinkedHashMap (extends HashMap)
+        упорядоченная - по порядку добавления элементов
+        двунаправленные связи
+        недостаток — увеличение памяти, которое занимет коллекция
 
-    3. SortedMap (interface, extends Map)
+        3. SortedMap (interface, extends Map)
         1. NavigableMap (interface, extends SortedMap)
-            1. TreeMap (implements NavigableMap)
-                красно-чёрные деревья
-                упорядоченная - default = natural ordering
-                can use Comparator
+        1. TreeMap (implements NavigableMap)
+        красно-чёрные деревья
+        упорядоченная - default = natural ordering
+        can use Comparator
 
-    4. Hashtable
+        4. Hashtable
         not nullable
         SYNCHRONIZES - проблемы с производительностью, рекомендуется не использовать
         when need synchronization - ConcurrentHashMap
         when no need - HashMap
 
-     */
+         */
     }
 
     private fun concurrentCollections() {
@@ -131,7 +130,7 @@ object Collections: Doc() {
         ConcurrentNavigableMap 	расширяет интерфейс NavigableMap
         ConcurrentSkipListMap 	аналог коллекции TreeMap с сортировкой данных по ключу и с поддержкой многопоточности
         ConcurrentSkipListSet 	реализация интерфейса Set, выполненная на основе класса ConcurrentSkipListMap
-        */
+         */
     }
 
     private fun kotlinCollections() {
@@ -139,7 +138,7 @@ object Collections: Doc() {
         Iterable    ->  MutableIterable (extends Iterable)
         Collection      MutableCollection
         List Set        MutableList MutableSet                  Map MutableMap
-        */
+         */
 
         //LIST
         val list = listOf<String>() // -> EmptyList -> List<Nothing>

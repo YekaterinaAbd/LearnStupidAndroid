@@ -4,6 +4,14 @@ import com.example.learnstupidandroid.common.Doc
 import java.lang.reflect.Field
 import java.lang.reflect.Method
 
+/**
+ * - Может назвать все модификаторы видимости и рассказать про каждый (можно без internal и package private)
+ * - Какой модификатор видимости по умолчанию в Kotlin? Java?
+ * - Как реализован internal и видно ли его из Java? Как сделать чтобы internal нельзя было вызвать из Java?
+ * - Разница package private и internal
+ * - Можно ли получить доступ к private не в калссе, а в внутри экземпляра класса?
+ * - Можно ли получить доступ к приватный членам класса внутри другого класса?
+**/
 object AccessModifiers : Doc() {
 
     override fun init() {
