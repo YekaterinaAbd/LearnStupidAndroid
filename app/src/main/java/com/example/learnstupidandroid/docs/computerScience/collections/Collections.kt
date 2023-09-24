@@ -18,7 +18,6 @@ import com.example.learnstupidandroid.docs.computerScience.collections.collectio
 - Знание о многопоточных коллекциях
 - Во что превращаются 'setOf()', 'listOf()' в Kotlin
  */
-
 object Collections : Doc() {
 
     override fun init() {
@@ -39,84 +38,101 @@ object Collections : Doc() {
         kotlinCollections()
     }
 
-    override fun docs() {
-        /**
-        JAVA
-
-        Iterable
-        Collection
-        List   Queue   Set
-
-        List (interface, extends Collection)
-        1. ArrayList (implements List)
-        NOT SYNCHRONIZED
-        2. Vector (implements List)
-        SYNCHRONIZED
-        3. LinkedList (implements List implements Deque)
-        4. Stack (extends Vector)
-        last-in-first-out (LIFO) stack of objects
-        PREFER TO USE: Dequeue
-
-
-        Queue (interface, extends Collection)
-        first-in-first-out order
-        1. PriorityQueue (implements Queue)
-        NOT THREAD SAFE
-        priority with Comparator
-        2. PriorityBlockingQueue
-        THREAD SAFE
-        3. Dequeue (interface, extends Queue)
-        double-ended queue
-        used as a queue (first-in-first-out/FIFO) or as a stack (last-in-first-out/LIFO)
-        1. ArrayDeque (implements Deque)
-        NOT THREAD SAFE
-
-
-        Set (interface, extends Collection)
-        no duplicate values
-        1. HashSet (implements Set)
-        uses a hash table for storage - HashMap
-        order is not guaranteed
-        2. LinkedHashSet (implements Set, extends HashSet)
-        uses LinkedHashMap
-        order as added
-        3. SortedSet (interface, extends Set)
-        arranged in the increasing (ascending) order
-        1. TreeSet (implements SortedSet)
-        Comparator for order
-        uses a tree for storage
-        access and retrieval time is quite fast
-
-
-        Map
-        1. WeakHashMap (implements Map)
-        uses week references for the keys
-
-        2. HashMap (implements Map)
-        NOT SYNCHRONIZED
-        key and value can be null
-        не упорядоченная, зависит от хеш функции
-        1. LinkedHashMap (extends HashMap)
-        упорядоченная - по порядку добавления элементов
-        двунаправленные связи
-        недостаток — увеличение памяти, которое занимет коллекция
-
-        3. SortedMap (interface, extends Map)
-        1. NavigableMap (interface, extends SortedMap)
-        1. TreeMap (implements NavigableMap)
-        красно-чёрные деревья
-        упорядоченная - default = natural ordering
-        can use Comparator
-
-        4. Hashtable
-        not nullable
-        SYNCHRONIZES - проблемы с производительностью, рекомендуется не использовать
-        when need synchronization - ConcurrentHashMap
-        when no need - HashMap
-
-         */
-    }
-
+    /**
+     * **JAVA**
+     * ```
+     * Iterable
+     * Collection
+     * List   Queue   Set
+     * ```
+     * List (interface, extends Collection)
+     * ```
+     * 1. ArrayList (implements List)
+     *    NOT SYNCHRONIZED
+     *
+     * 2. Vector (implements List)
+     *    SYNCHRONIZED
+     *
+     * 3. LinkedList (implements List implements Deque)
+     *
+     * 4. Stack (extends Vector)
+     *    last-in-first-out (LIFO) stack of objects
+     *    PREFER TO USE: Dequeue
+     * ```
+     *
+     * Queue (interface, extends Collection)
+     *
+     * first-in-first-out order
+     * ```
+     * 1. PriorityQueue (implements Queue)
+     *    NOT THREAD SAFE
+     *    priority with Comparator
+     *
+     * 2. PriorityBlockingQueue
+     *    THREAD SAFE
+     *
+     * 3. Dequeue (interface, extends Queue)
+     *    double-ended queue
+     *    used as a queue (first-in-first-out/FIFO) or as a stack (last-in-first-out/LIFO)
+     *
+     *      1. ArrayDeque (implements Deque)
+     *         NOT THREAD SAFE
+     * ```
+     *
+     * Set (interface, extends Collection)
+     *
+     * no duplicate values
+     * ```
+     * 1. HashSet (implements Set)
+     *    uses a hash table for storage - HashMap
+     *    order is not guaranteed
+     *
+     * 2. LinkedHashSet (implements Set, extends HashSet)
+     *    uses LinkedHashMap
+     *    order as added
+     *
+     * 3. SortedSet (interface, extends Set)
+     *    arranged in the increasing (ascending) order
+     *
+     *      1. TreeSet (implements SortedSet)
+     *         Comparator for order
+     *         uses a tree for storage
+     *         access and retrieval time is quite fast
+     * ```
+     *
+     * Map
+     * ```
+     * 1. WeakHashMap (implements Map)
+     *    uses week references for the keys
+     *
+     * 2. HashMap (implements Map)
+     *    NOT SYNCHRONIZED
+     *    key and value can be null
+     *    не упорядоченная, зависит от хеш функции
+     *
+     *      1. LinkedHashMap (extends HashMap)
+     *         упорядоченная - по порядку добавления элементов
+     *         двунаправленные связи
+     *         недостаток — увеличение памяти, которое занимет коллекция
+     *
+     * 3. SortedMap (interface, extends Map)
+     *
+     *      1. NavigableMap (interface, extends SortedMap)
+     *
+     *          1. TreeMap (implements NavigableMap)
+     *             красно-чёрные деревья
+     *             упорядоченная - default = natural ordering
+     *             can use Comparator
+     *
+     * 4. Hashtable
+     *    not nullable
+     *    SYNCHRONIZES - проблемы с производительностью, рекомендуется не использовать
+     *    when need synchronization - ConcurrentHashMap
+     *    when no need - HashMap
+     *```
+     */
+    override fun docs() {}
+    
     private fun concurrentCollections() {
         /**
         Методы обрамления для получения синхронизированной (потокобезопасной) коллекции
@@ -133,12 +149,13 @@ object Collections : Doc() {
          */
     }
 
+    /**
+     * ```
+    Iterable    ->  MutableIterable (extends Iterable)
+    Collection      MutableCollection
+    List Set        MutableList MutableSet                  Map MutableMap
+     */
     private fun kotlinCollections() {
-        /**
-        Iterable    ->  MutableIterable (extends Iterable)
-        Collection      MutableCollection
-        List Set        MutableList MutableSet                  Map MutableMap
-         */
 
         //LIST
         val list = listOf<String>() // -> EmptyList -> List<Nothing>
