@@ -132,7 +132,7 @@ object Collections : Doc() {
      *```
      */
     override fun docs() {}
-    
+
     private fun concurrentCollections() {
         /**
         Методы обрамления для получения синхронизированной (потокобезопасной) коллекции

@@ -91,7 +91,15 @@ data class Student(
     private fun getStudentData() = "Name: $name, Age: $age"
 }
 
-/**Java reflection**/
+/**
+ * **Java reflection**
+ *
+ * To access private fields use
+ * ```
+ * privateField = Someclass::class.java.getDeclaredField("field")
+ * provateFiield.isAccessable = true
+ * ```
+ * **/
 object Reflection {
     @JvmStatic
     fun main(args: Array<String>) {
