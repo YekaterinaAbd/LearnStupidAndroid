@@ -7,7 +7,9 @@ import com.example.learnstupidandroid.docs.computerScience.pp.ProgrammingPrincip
 import com.example.learnstupidandroid.docs.computerScience.collections.Collections
 import com.example.learnstupidandroid.docs.computerScience.delegate.Delegates
 import com.example.learnstupidandroid.docs.language.AccessModifiers
+import com.example.learnstupidandroid.docs.language.Classes
 import com.example.learnstupidandroid.docs.language.Generics
+import com.example.learnstupidandroid.docs.language.Kotlin
 import com.example.learnstupidandroid.docs.language.inline.Inline
 import com.example.learnstupidandroid.docs.language.Primitives
 import com.example.learnstupidandroid.docs.language.inline.ValueClass
@@ -24,11 +26,14 @@ class MainActivity : AppCompatActivity() {
         Delegates.init()
 
         //Language
+        Kotlin.init()
+        Classes.init()
         AccessModifiers.init()
         Primitives.init()
         Inline.init()
         ValueClass.init()
         Generics.init()
+
         //Memory
 
         //Android

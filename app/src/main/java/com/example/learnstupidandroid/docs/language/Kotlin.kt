@@ -18,22 +18,101 @@ import com.example.learnstupidandroid.common.Doc
  * - Infix
  * - Invoke
  */
-object Kotlin: Doc() {
+object Kotlin : Doc() {
 
     /**
-     * - Data class vs Class vs Open class
+     * - Data class vs Class vs Open class +
+     * - Nested and Inner Class +
+     * - Enum, Sealed class, sealed interface +
+     *
+     * - Functional Interfaces +
+     * - Type aliases +
+     *
      * - Object, companion object
-     * - Sealed class
-     * - val vs var vs const
+     * - Anonymous object
+     *
+     * - val vs var vs const, lateinit +
      * - let/run/with/also/apply
+     *
      * - Infix
      * - Invoke
+     *
+     * - Destructuring declarations +
+     *
+     * - Serializable, Parcelable
      */
     override fun init() {
-        TODO("Not yet implemented")
+        docs()
     }
 
     override fun docs() {
-        TODO("Not yet implemented")
+        destructingDeclaration()
+        properties()
+    }
+
+    /**
+     * **destructing declaration**
+     *
+     * destructing declaration creates multiple variables at once
+     * ```
+     * val (name, age) = person
+     *
+     * // compiled to:
+     * val name = person.component1()
+     * val age = person.component2()
+     * ```
+     * maps:
+     * ```
+     * for((key, value) in map) {...}
+     * ```
+     * to skip the componentI can use underscode:
+     * componentN function is not called for skipped elements
+     * ```
+     * val (_, status) = getResult()
+     * ```
+     *
+     */
+    private fun destructingDeclaration() {}
+
+    /**
+     * **const** - compile-time constants, read-only
+     * - top-level, a part of object or companion-object
+     * - only primitives or String
+     *
+     * - const is inlined, and the reference will be replaced with actual value
+     * - the field will not be removed, and can be accessed using **reflection**
+     *
+     * **var** - mutable
+     *
+     * **val** - immutable
+     *
+     * **custom setter** called every time you assign a value to the property, except its initialization
+     *
+     * **lateinit**
+     * - only var
+     * - inside class body, top-level property, local variable
+     * - must be non-nullable
+     * - must be not primitive type
+     * - accessing before initialization throws exception
+     */
+    private fun properties() {
+        class MutableRectangle(val width: Int, var height: Int) {
+            var area: Int
+                get() = width * height
+                set(value) {
+                    height = value / width
+                }
+            var isSquare: Boolean = width == height
+                private set
+
+            // backing field
+            var counter = 0
+                set(value) {
+                    if (value > 0) {
+                        field = value //field = counter
+                    }
+                }
+        }
+
     }
 }
